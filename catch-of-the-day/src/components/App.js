@@ -3,6 +3,14 @@ import Header from './Header';
 import Order from './Order';
 import Inventory from './Inventory';
 class App extends React.Component {
+  state = {
+    fishes: {},
+    order: {}
+  }
+
+  addFish = fish => {
+    console.log("hi");
+  }
   render() { 
     return (
       <div className="catch-of-the-day">
@@ -10,7 +18,7 @@ class App extends React.Component {
           <Header tagline='A Cool Market'/>
         </div>
         <Order />
-        <Inventory />
+        <Inventory addFish={this.addFish}/>
       </div>
     );
   }
