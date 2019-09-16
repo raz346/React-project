@@ -40,7 +40,8 @@ class App extends React.Component {
           <Header tagline='A Cool Market'/>
           <ul className='fishes'>
             {Object.keys(this.state.fishes).map(key =>
-               <Fish key={key} fishDetails={this.state.fishes[key]} addToOrder={this.addToOrder} index={key} />)}
+               <Fish key={key} fishDetails={this.state.fishes[key]}
+               addToOrder={this.addToOrder} index={key} />)}
           </ul>
         </div>
         <Order />
